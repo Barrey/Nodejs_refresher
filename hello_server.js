@@ -15,11 +15,13 @@ const server = http.createServer(function(req, res){
 					//throw err; //will throw error and stop the event loop just like process.exit()
 					console.log(err);
 				}
+				setTimeout(() => {
+					console.log("in the making (for 2 second)")
+					res.statusCode = 302 //it's important to set statusCode to 302 to redirect user
+					res.setHeader('Location', '/')
+					return res.end()
+				}, 2000)
 			})
-
-			res.statusCode = 302 //it's important to set statusCode to 302 to redirect user
-			res.setHeader('Location', '/')
-			return res.end()
 		})
 
 		
