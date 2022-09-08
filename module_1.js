@@ -25,4 +25,19 @@ module.exports = {
 // exports.test2 = test2
 // exports.test3 = test3
 
+//or you can export with this style
+/*
+module.exports = {
+    test : function(){
+        console.log("test aja nih")
+    },
+    test2: function(arg) {
+        console.log("test aja nih => " + arg)
+    }, 
+    test3: (arg) => {
+        console.log("test aja nih => " + arg)
+    }
+}
+*/
+
 // exports = {test:test, test2:test2, test3:test3}  //unable to call with this way
